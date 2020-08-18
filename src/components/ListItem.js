@@ -13,12 +13,14 @@ class ListItem extends Component {
     const{todoId, todo} = this.props;
     return (
       <div key="toDoName" className="todo-list-item">
-        <h4>
+        <div key="toDoTitle" className="todo-list-title">
           {todo.title}
+        </div>
+        <div key="todoButton" className="todo-list-button">
           <span onClick={() => this.handleComplete(todoId)}>
             <i>Done</i>
           </span>
-        </h4>
+        </div>
       </div>
     );
   }
